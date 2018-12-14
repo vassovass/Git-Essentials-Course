@@ -1,0 +1,26 @@
+Q: In the Chapter 10 movie "Configuring the command prompt to show the branch," 
+when I type the function "__git_ps1," I do not get the expected result.
+
+A: The function "__git_ps1" was recently moved to a new file, .git-prompt.sh, as 
+described here: 
+<a target="_blank" href="https://github.com/git/git/commit/af31a456b4cd38f2630ed8e556e23954f806a3cc">https://github.com/git/git/commit/af31a456b4cd38f2630ed8e556e23954f806a3cc</a>.<br /><br />We will update the video. 
+In the meantime, you may do the same steps you do for .git-completion.bash, but a second time using ".git-prompt.sh" as shown here:
+<a target="_blank" href=" https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh"> https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh</a>.
+
+Q: When I use the code the instructor advises in the above video 
+("git config&#8232;--global user.name "Nelda Street"), I still get an 
+"Illegal Instruction"&#8232;error. I have OS 10.6.8. Am I doing something wrong?
+
+A: The current installer version of git isn't compatible with older Mac OS versions.
+<div id="pastingspan1">&nbsp;</div><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><div>https://code.google.com/p/git-osx-installer/issues/detail?id=96</div></blockquote><div id="pastingspan1">&nbsp;</div><div>
+The workaround solutions people offer are:
+</div><div id="pastingspan1">&nbsp;</div><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><div>1. To add "-mmacosx-version-min=10.6" 
+as described here:</div><div id="pastingspan1">https://stackoverflow.com/questions/14268887/what-is-the-illegal-instruction-4-error-and-why-does-mmacosx-version-min-10</div><div>&nbsp;</div><div>https://stackoverflow.com/questions/10177038/illegal-instruction-4-shows-up-in-os-x-lion</div></blockquote><div id="pastingspan1">&nbsp;</div><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><div>2. 
+Or to use the version of git that comes with Xcode, or to use homebrew to install git instead.</div><div id="pastingspan1">http://superuser.com/questions/697144/installed-git-not-sure-how-to-get-it-working</div></blockquote>
+
+
+
+The prompt code has been moved out of the completion code and into its own file.
+https://github.com/git/git/tree/master/contrib/completion
+
+You can do the same steps you did for .git-completion.bash but a second time using ".git-prompt.sh"
